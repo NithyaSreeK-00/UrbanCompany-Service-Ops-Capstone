@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/32670876/README.md)
 # Urban Company Service-Ops Diagnostic \& AI-Augmented Reporting Toolkit
 
 End-to-end service operations analytics pipeline reconciling SQLite database outputs, spreadsheet models, Tableau Public visualizations, and rule-based escalation specifications.
