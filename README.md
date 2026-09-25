@@ -9,16 +9,37 @@ End-to-end service operations analytics pipeline reconciling SQLite database out
 
 ## Repository Contents
 
-* `generate\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_data.py`: Seed data generation script (seed 2604).
-* `urban\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_service.db`: Generated SQLite database.
-* `cities.csv`, `categories.csv`, `partners\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_import.csv`, `bookings.csv`: Source data exports.
-* `verify\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_output.txt`: Table count verification logs.
-* `sanity\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_check.py`: Non-SQL manual dictionary accumulation check.
-* `01\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_dedup\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_and\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_joins.sql`: Partner deduplication and join diagnostic queries.
-* `02\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_insert\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_delete.sql`: Record modification statements and aggregate export queries.
-* `city\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_category\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_summary.csv`: Fully reconciled summary dataset.
-* `urban\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_company\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_metrics.xlsx`: Excel KPI model with VLOOKUPs, Pivot Table, and SUMIFS formulas.
-* `DASHBOARD\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_STORY.md`: Headline-Evidence-Implication executive narratives.
-* `prompt\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_pack.md`: Operational reporting prompt pack with critic-and-refine iterations.
-* `escalation\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_agent\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_spec.md`: Rule-based escalation specification and 8-record trace log.
+### Python
 
+* `generate_data.py` — Seed data generation script (seed 2604).
+* `sanity_check.py` — Python sanity checks to validate booking counts and revenue totals.
+
+### SQL
+
+* `01_dedup_and_joins.sql` — Partner deduplication, joins, and reconciliation queries.
+* `02_insert_delete.sql` — Insert, delete, and final aggregation export queries.
+
+### Data
+
+* `urban_service.db` — SQLite database containing Urban Company operational data.
+* `city_category_summary.csv` — Reconciled city-category summary dataset.
+* `cities.csv`, `categories.csv`, `partners_import.csv`, `bookings.csv` — Source data exports.
+
+### Excel
+
+* `Urban_Company_KPI_Workbook.xlsx` — KPI workbook with VLOOKUP, SUMIFS, COUNTIFS, conditional formatting, and Pivot Tables.
+
+### Tableau
+
+* `Urban Company Service Ops Dashboard.twbx` — Tableau dashboard workbook.
+* Tableau Public Dashboard — Interactive published dashboard.
+
+### AI Documentation
+
+* `PROMPTS.md` — AI prompt pack for operational reporting.
+* `ESCALATION_AGENT.md` — Rule-based escalation agent specification.
+* `DASHBOARD_STORY.md` — Stakeholder narratives using Headline → Evidence → Implication format.
+
+### Validation
+
+* `verify_output.txt` — Database verification log after data generation.
