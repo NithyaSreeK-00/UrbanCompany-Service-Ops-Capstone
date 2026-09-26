@@ -1,14 +1,6 @@
 
--- =========================================
--- Urban Company Capstone - Part A
--- 02_insert_delete.sql
--- =========================================
-
--- Delete test bookings
 DELETE FROM bookings
 WHERE is_test = 1;
-
--- Insert replacement bookings
 
 INSERT INTO bookings VALUES
 ('B9001','P009','Mumbai',
@@ -25,14 +17,10 @@ INSERT INTO bookings VALUES
  'Electrical Repair','2026-03-31',
  980,0,0,0);
 
--- Verify totals
-
 SELECT
 COUNT(*) AS total_bookings,
 SUM(amount_inr) AS total_revenue
 FROM bookings;
-
--- LIKE query
 
 SELECT
 partner_id,
@@ -40,8 +28,6 @@ city,
 primary_category
 FROM partners
 WHERE primary_category LIKE 'Salon%';
-
--- Export query
 
 SELECT
 city,
