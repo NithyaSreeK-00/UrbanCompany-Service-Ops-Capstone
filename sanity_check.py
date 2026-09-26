@@ -36,6 +36,3 @@ for booking in sample_bookings:
 
 for category in summary:
     print(category, summary[category])
-
-# SQL verification comment:
-# SQL results match Python results exactly for all three categories.
